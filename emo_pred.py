@@ -63,7 +63,7 @@ while(cap.isOpened()):
     img=cv2.flip(img,1)
     hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
     mask1=cv2.inRange(hsv,np.array([2,50,60]),np.array([25,150,255]))
-    #mask1=cv2.inRange(hsv,np.array([2,45,50]),np.array([25, 145,245]))
+   
     
     res=cv2.bitwise_and(img,img,mask=mask1)
     gray=cv2.cvtColor(res,cv2.COLOR_BGR2GRAY)
