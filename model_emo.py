@@ -26,20 +26,6 @@ Normalization and Train Test Split
 
 X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=0.33,random_state=42)
 
-##for i in range(X_train.shape[0]):
-##    for j in range(X_train.shape[1]):
-##        X_train[i][j]=X_train[i][j]/255
-##for i in range(X_test.shape[0]):
-##    for j in range(X_test.shape[1]):
-##        X_test[i][j]=X_test[i][j]/255
-##Y_train=Y_train/255
-##Y_test=Y_test/255
-
-##X_test=X_test/255
-##
-##Y_train=Y_train/255
-##
-##Y_test=Y_test/255
 
 '''
 One Hot Encoding
