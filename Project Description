@@ -1,0 +1,32 @@
+The project "Emojinator" is a Machine Learning Project used to build a Machine Learning Algorithm to recognize correct emojis through hand movements.
+
+Algorithm:
+
+Emojinator.py
+
+The emojinator.py file contains a createFolder() and storeImages() function. The storeImages() function uses the Default camera to capture
+frames. By using Image Processing techniques like Thresholding, masking we create a Thresh Window. Approximately 1500 images of the Thresh Window
+are captured which contains the Hand pictures of different emojis. 
+Thus this file is basically used to prepare the training dataset for the Machine Learning model.
+
+toCSV.py
+
+This file uses "os" library of Python to direct to the image folders and converts every image file and adds it to a dataframe. This dataframe 
+is converted into a .csv(Comma Separated Value) file named as "train.csv".
+
+model_emo.py
+
+This Python file deals with building a machine learning model from the train csv and validating the model. The model is stored as a.h5 file. We 
+use the keras library of TensorFlow to build the Sequential Model by adding layers which improve the images by adding filters to it and thus
+extracting useful data.
+
+emo_pred.py
+
+This Python file uses the get_emojis() function to store the emoji gid in a list. This python file also contains the keras_predict() method 
+which uses the predict() function to predict the correct emoji by comparing the hand movements with the actual emoji pictures. Once the prediction
+is done it returns the gid of the emoji. This gid is then fed as input to the overlay function which is responsible for overlaying the emoji on the 
+camera feed.
+
+
+
+
